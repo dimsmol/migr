@@ -1,0 +1,32 @@
+{
+	"name": "migr",
+	"version": "0.0.1",
+	"description": "Fills foreign citisen arrival form required by federal migration service of Russia",
+	"keywords": ["fms", "russia", "migr", "form", "filler"],
+	"author": {
+		"name": "Dmitry Smolin",
+		"email": "dimsmol@gmail.com"
+	},
+	"preferGlobal": true,
+	"private": false,
+	"dependencies": {
+		"canvas": "~0.12.0",
+		"async": "~0.1.17",
+		"ncbt": "~0.0.1"
+	},
+	"engines": {
+		"node": "~0.6.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/dimsmol/migr"
+	},
+	"directories": {
+		"lib": "./lib",
+		"bin": "./bin"
+	},
+	"main": "./lib/index",
+	"bin": {
+		"migr": "./bin/migr"
+	}
+}

@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+"use strict";
+var fs = require('fs');
+var Migr1 = require('../lib/migr1');
+var Migr2 = require('../lib/migr2');
+
+
+var argv = process.argv;
+var data;
+if (argv.length > 2) {
+	data = JSON.parse(fs.readFileSync(argv[2]));
+}
+
+var migr1 = new Migr1(data);
+var migr2 = new Migr2(data);
+
+var cb = function (name) {
+	return function (err) {
+		if (err) {
+			console.log(name, 'error:', err);
+			process.exit(1);
+		}
+		else {
+			console.log(name, 'done');
+		}
+	};
+};
+
+if (data) {
+	migr1.fill(cb(migr1.name));
+	migr2.fill(cb(migr2.name));
+}
+else {
+	migr1.test(cb(migr1.name));
+	migr2.test(cb(migr2.name));
+}
