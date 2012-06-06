@@ -2,7 +2,7 @@
 
 Install:
 
-`npm install migr`
+`npm install migr -g`
 
 Usage:
 
