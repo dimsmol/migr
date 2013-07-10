@@ -10,7 +10,7 @@
 	"preferGlobal": true,
 	"private": false,
 	"dependencies": {
-		"canvas": "~0.12.0",
+		"canvas": "~1.0.3",
 		"async": "~0.1.17",
 		"ncbt": "~0.0.1"
 	},
