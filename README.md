@@ -10,3 +10,7 @@ Usage:
 * `migr` to generate test blanks
 
 Use data_example.json as example of json data file.
+
+## License
+
+MIT
